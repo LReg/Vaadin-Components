@@ -1,0 +1,28 @@
+
+version: '3'
+
+#In case you want to setup a traefik configuration, the commented lines are good to pick up on
+
+services:
+  vaadincomponents:
+    build:
+      context: .
+    container_name: Vaadin_Components
+    restart: always
+#    networks:
+#      - Frontend
+
+# In case you want to setup a traefik configuraion, you problably should close the ports
+    ports:
+     - 80:8080
+    
+#    labels:
+#      - traefik.enable=true
+#      - traefik.http.routers.bwltoolRouter.rule=Host(`YOURDOMAIN.COM`)
+#      - traefik.http.routers.bwltoolRouter.entrypoints=Https
+#      - traefik.http.routers.bwltoolRouter.tls=true
+#      - traefik.http.routers.bwltoolRouter.tls.certresolver=HttpsResolver
+
+#networks:
+#  Frontend:
+#    external: true

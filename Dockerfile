@@ -10,7 +10,7 @@ COPY ./ ./
 RUN mvn -B package -Pproduction
 
 
-FROM openjdk:16-jre-slim
+FROM openjdk:16.0-jdk-nanoserver
 
 EXPOSE 8080
 WORKDIR /usr/src/app

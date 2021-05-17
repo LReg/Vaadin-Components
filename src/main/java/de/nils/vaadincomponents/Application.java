@@ -1,4 +1,4 @@
-package de.nils.components;
+package de.nils.vaadincomponents;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

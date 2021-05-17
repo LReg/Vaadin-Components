@@ -1,4 +1,4 @@
-package de.nils.components.views.main;
+package de.nils.vaadincomponents.views.main;
 
 import java.util.Optional;
 
@@ -19,15 +19,17 @@ import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.router.PageTitle;
+import de.nils.vaadincomponents.views.exampleUse.CardExample;
+import de.nils.vaadincomponents.views.exampleUse.ContentEditorExample;
+import de.nils.vaadincomponents.views.exampleUse.VerticallayoutWithFooterExample;
 
 /**
  * The main view is a top-level placeholder for other views.
  */
 @PWA(name = "Vaadin-Components", shortName = "Vaadin-Components", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
-@CssImport("./views/main/main-view.css")
+@CssImport("./views/main-view.css")
 public class MainView extends AppLayout {
 
     private final Tabs menu;
@@ -80,7 +82,12 @@ public class MainView extends AppLayout {
     }
 
     private Component[] createMenuItems() {
-        return new Tab[]{createTab("Home", HomeView.class)};
+        return new Tab[]{
+                createTab("Home", HomeView.class),
+                createTab("Content Editor", ContentEditorExample.class),
+                createTab("Card", CardExample.class),
+                createTab("VL with Footer", VerticallayoutWithFooterExample.class)
+        };
     }
 
     private static Tab createTab(String text, Class<? extends Component> navigationTarget) {

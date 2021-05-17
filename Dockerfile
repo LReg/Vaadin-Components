@@ -1,5 +1,5 @@
 
-FROM maven:3.8-openjdk-11 AS builder
+FROM maven:3.8-openjdk-16 AS builder
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,7 @@ COPY ./ ./
 RUN mvn -B package -Pproduction
 
 
-FROM openjdk:14-jre-slim
+FROM openjdk:16-jre-slim
 
 EXPOSE 8080
 WORKDIR /usr/src/app

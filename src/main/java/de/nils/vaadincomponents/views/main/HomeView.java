@@ -4,7 +4,7 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import de.nils.vaadincomponents.components.Card;
+import de.nils.vaadincomponents.components.cards.Card;
 import de.nils.vaadincomponents.views.exampleUse.CardExample;
 import de.nils.vaadincomponents.views.exampleUse.ContentEditorExample;
 import de.nils.vaadincomponents.views.exampleUse.VerticallayoutWithFooterExample;
@@ -15,7 +15,6 @@ public class HomeView extends VerticalLayout {
     public HomeView(){
         //this
         this.getStyle().set("background-color", "#d6d6d6");
-        this.setHeightFull();
 
         //title
         H1 title = new H1("Available Components:");

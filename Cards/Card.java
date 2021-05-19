@@ -1,4 +1,4 @@
-package de.nils.vaadincomponents.components;
+package de.nils.vaadincomponents.components.cards;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
@@ -8,9 +8,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 @CssImport("./components/card.css")
 public class Card extends VerticalLayout {
 
-    private H2 title = new H2();
-    private H3 mobileTitle = new H3();
-    private Span description = new Span();
+    private H2 title = new H2("-");
+    private H3 mobileTitle = new H3("-");
+    private Span description = new Span("-");
     private Class navigationTarget;
     private boolean mobileVersion = false;
 
@@ -35,16 +35,18 @@ public class Card extends VerticalLayout {
 
     private void listener() {
         this.addClickListener(e -> {
-           e.getSource().getUI().ifPresent(ui -> {
-               ui.navigate(navigationTarget);
-           });
+            e.getSource().getUI().ifPresent(ui -> {
+                if(navigationTarget!=null)
+                    ui.navigate(navigationTarget);
+            });
         });
     }
 
     private void settings() {
-        this.addClassName("shadow");
+        this.addClassName("card");
         this.addClassName("space");
         this.setSpacing(true);
+        description.addClassName("description");
     }
 
     public Card setNavigationTarget(Class nav){

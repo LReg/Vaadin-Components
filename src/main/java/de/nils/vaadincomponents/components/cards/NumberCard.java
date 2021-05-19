@@ -46,7 +46,7 @@ public class NumberCard extends VerticalLayout {
             number.setClassName("normal");
         }
         title.addClassName("title");
-        description.setClassName("description");
+        description.setClassName("ncdescription");
         this.addClassName("card");
         this.addClassName("space");
         this.addClassName("card");

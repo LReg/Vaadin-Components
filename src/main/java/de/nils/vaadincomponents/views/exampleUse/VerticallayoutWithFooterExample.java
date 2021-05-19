@@ -1,10 +1,8 @@
 package de.nils.vaadincomponents.views.exampleUse;
 
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import de.nils.vaadincomponents.components.Card;
-import de.nils.vaadincomponents.components.ContentEditor.ContentEditor;
+import de.nils.vaadincomponents.components.cards.Card;
 import de.nils.vaadincomponents.components.VerticalLayoutWithFooter;
 import de.nils.vaadincomponents.views.main.MainView;
 

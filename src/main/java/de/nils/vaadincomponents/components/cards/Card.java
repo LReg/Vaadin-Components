@@ -1,4 +1,4 @@
-package de.nils.vaadincomponents.components;
+package de.nils.vaadincomponents.components.cards;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
@@ -42,7 +42,7 @@ public class Card extends VerticalLayout {
     }
 
     private void settings() {
-        this.addClassName("shadow");
+        this.addClassName("card");
         this.addClassName("space");
         this.setSpacing(true);
     }

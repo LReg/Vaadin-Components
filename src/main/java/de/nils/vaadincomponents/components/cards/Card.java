@@ -46,6 +46,7 @@ public class Card extends VerticalLayout {
         this.addClassName("card");
         this.addClassName("space");
         this.setSpacing(true);
+        description.addClassName("description");
     }
 
     public Card setNavigationTarget(Class nav){

@@ -14,6 +14,7 @@ public class VerticalLayoutWithFooter extends VerticalLayout {
     public VerticalLayoutWithFooter(){
         super();
         super.add(content);
+        this.setMinHeight("100%");
         fillStandartFooter();
         super.add(footer);
     }

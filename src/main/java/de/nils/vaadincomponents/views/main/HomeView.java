@@ -15,7 +15,6 @@ public class HomeView extends VerticalLayout {
     public HomeView(){
         //this
         this.getStyle().set("background-color", "#d6d6d6");
-        this.setHeightFull();
 
         //title
         H1 title = new H1("Available Components:");

@@ -11,7 +11,7 @@ import de.nils.vaadincomponents.views.main.MainView;
 @Route(value = "/contenteditor", layout = MainView.class)
 public class ContentEditorExample extends VerticalLayout {
     public ContentEditorExample(){
-        this.setHeightFull();
+        this.setMinHeight("100%");
         this.getStyle().set("background-color", "#d6d6d6");
         this.setAlignItems(Alignment.CENTER);
         ContentEditor ce = new ContentEditor();

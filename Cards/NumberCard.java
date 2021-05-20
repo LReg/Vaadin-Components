@@ -4,7 +4,7 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 @CssImport("./components/card.css")
-public class NumberCard extends VerticalLayout {
+public class NumberCard extends Card {
 
     public final int NORMAL = 1;
     public final int WARNING = 2;

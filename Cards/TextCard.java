@@ -4,7 +4,7 @@ import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 @CssImport("./components/card.css")
-public class Card extends VerticalLayout {
+public class Card extends Card {
 
     private H2 title = new H2("-");
     private H3 mobileTitle = new H3("-");

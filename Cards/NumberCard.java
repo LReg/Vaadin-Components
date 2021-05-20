@@ -1,11 +1,8 @@
-package de.nils.vaadincomponents.components.cards;
-
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-@CssImport("./components/numberCard.css")
 @CssImport("./components/card.css")
 public class NumberCard extends VerticalLayout {
 
@@ -47,9 +44,7 @@ public class NumberCard extends VerticalLayout {
         }
         title.addClassName("title");
         description.setClassName("ncdescription");
-        this.addClassName("card");
         this.addClassName("space");
-        this.addClassName("card");
         number.addClassName("number");
     }
 

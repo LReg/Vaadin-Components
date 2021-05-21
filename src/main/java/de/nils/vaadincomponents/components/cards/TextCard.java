@@ -11,7 +11,6 @@ public class TextCard extends Card {
     private H2 title = new H2("-");
     private H3 mobileTitle = new H3("-");
     private Span description = new Span("-");
-    private Class navigationTarget;
     private boolean mobileVersion = false;
 
     public static TextCard createCard(){
@@ -20,7 +19,7 @@ public class TextCard extends Card {
 
     public TextCard(){
         settings();
-        listener();
+
         build();
     }
 
@@ -31,15 +30,6 @@ public class TextCard extends Card {
         else
             add(title);
         add(description);
-    }
-
-    private void listener() {
-        this.addClickListener(e -> {
-            e.getSource().getUI().ifPresent(ui -> {
-                if(navigationTarget!=null)
-                    ui.navigate(navigationTarget);
-            });
-        });
     }
 
     private void settings() {
@@ -73,6 +63,5 @@ public class TextCard extends Card {
         this.mobileVersion = mobileVersion;
         build();
     }
-
 
 }

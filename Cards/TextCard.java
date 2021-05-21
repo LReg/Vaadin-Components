@@ -1,24 +1,25 @@
+package de.nils.vaadincomponents.components.cards;
+
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 @CssImport("./components/card.css")
-public class Card extends Card {
+public class TextCard extends Card {
 
     private H2 title = new H2("-");
     private H3 mobileTitle = new H3("-");
     private Span description = new Span("-");
-    private Class navigationTarget;
     private boolean mobileVersion = false;
 
-    public static Card createCard(){
-        return new Card();
+    public static TextCard createCard(){
+        return new TextCard();
     }
 
-    public Card(){
+    public TextCard(){
         settings();
-        listener();
+
         build();
     }
 
@@ -31,33 +32,24 @@ public class Card extends Card {
         add(description);
     }
 
-    private void listener() {
-        this.addClickListener(e -> {
-            e.getSource().getUI().ifPresent(ui -> {
-                if(navigationTarget!=null)
-                    ui.navigate(navigationTarget);
-            });
-        });
-    }
-
     private void settings() {
         this.addClassName("space");
         this.setSpacing(true);
         description.addClassName("description");
     }
 
-    public Card setNavigationTarget(Class nav){
+    public TextCard setNavigationTarget(Class nav){
         this.navigationTarget = nav;
         return this;
     }
 
-    public Card setTitle(String title){
+    public TextCard setTitle(String title){
         this.title.setText(title);
         this.mobileTitle.setText(title);
         return this;
     }
 
-    public Card setDescription(String des){
+    public TextCard setDescription(String des){
         this.description.setText(des);
         return this;
     }
@@ -71,6 +63,5 @@ public class Card extends Card {
         this.mobileVersion = mobileVersion;
         build();
     }
-
 
 }

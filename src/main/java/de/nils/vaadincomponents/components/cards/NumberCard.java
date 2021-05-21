@@ -18,12 +18,8 @@ public class NumberCard extends Card {
     H2 number = new H2("-");
     Span description = new Span("-");
 
-    Class navigationTarget;
-
-
     public NumberCard(){
         settings();
-        listener();
         build();
     }
 
@@ -50,15 +46,6 @@ public class NumberCard extends Card {
         number.addClassName("number");
     }
 
-    private void listener() {
-        this.addClickListener(e -> {
-            e.getSource().getUI().ifPresent(ui -> {
-                if(navigationTarget!=null)
-                    ui.navigate(navigationTarget);
-            });
-        });
-    }
-
     public NumberCard setNumber(int number){
         this.number.setText(String.valueOf(number));
         return this;
@@ -81,8 +68,8 @@ public class NumberCard extends Card {
         return this;
     }
 
-    public NumberCard setNavigationTarget(Class nav){
-        this.navigationTarget = nav;
+    public NumberCard setNavigationTarget(Class navigationTarget) {
+        this.navigationTarget = navigationTarget;
         return this;
     }
 

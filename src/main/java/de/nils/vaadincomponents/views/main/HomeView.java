@@ -7,6 +7,7 @@ import com.vaadin.flow.router.Route;
 import de.nils.vaadincomponents.components.cards.TextCard;
 import de.nils.vaadincomponents.views.exampleUse.CardExample;
 import de.nils.vaadincomponents.views.exampleUse.ContentEditorExample;
+import de.nils.vaadincomponents.views.exampleUse.TopBarExample;
 import de.nils.vaadincomponents.views.exampleUse.VerticallayoutWithFooterExample;
 
 @PageTitle("Home")
@@ -39,6 +40,13 @@ public class HomeView extends VerticalLayout {
                 .setDescription("If you want a Verticallayout to have a footer, this is something to pick up from")
                 .setNavigationTarget(VerticallayoutWithFooterExample.class);
         add(vlwf);
+
+        //Top Bar
+        TextCard topb = new TextCard();
+        topb.setTitle("Top Bar")
+                .setDescription("Is an area at the top that you can open and hide some buttons for example in")
+                .setNavigationTarget(TopBarExample.class);
+        add(topb);
 
     }
 }

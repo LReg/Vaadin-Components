@@ -5,10 +5,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import de.nils.vaadincomponents.components.cards.TextCard;
-import de.nils.vaadincomponents.views.exampleUse.CardExample;
-import de.nils.vaadincomponents.views.exampleUse.ContentEditorExample;
-import de.nils.vaadincomponents.views.exampleUse.TopBarExample;
-import de.nils.vaadincomponents.views.exampleUse.VerticallayoutWithFooterExample;
+import de.nils.vaadincomponents.views.exampleUse.*;
 
 @PageTitle("Home")
 @Route(value = "", layout = MainView.class)
@@ -47,6 +44,13 @@ public class HomeView extends VerticalLayout {
                 .setDescription("Is an area at the top that you can open and hide some buttons for example in")
                 .setNavigationTarget(TopBarExample.class);
         add(topb);
+
+        //Cluster
+        TextCard cluster = new TextCard();
+        cluster.setTitle("Cluster")
+                .setDescription("A Cluster is a way to change the amount of things put into one row. That is useful in mobile Versions and interesting for users that want to customize the view.")
+                .setNavigationTarget(ClusterExample.class);
+        add(cluster);
 
     }
 }

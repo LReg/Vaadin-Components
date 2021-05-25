@@ -20,9 +20,7 @@ import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.router.PageTitle;
-import de.nils.vaadincomponents.views.exampleUse.CardExample;
-import de.nils.vaadincomponents.views.exampleUse.ContentEditorExample;
-import de.nils.vaadincomponents.views.exampleUse.VerticallayoutWithFooterExample;
+import de.nils.vaadincomponents.views.exampleUse.*;
 
 /**
  * The main view is a top-level placeholder for other views.
@@ -86,7 +84,9 @@ public class MainView extends AppLayout {
                 createTab("Home", HomeView.class),
                 createTab("Content Editor", ContentEditorExample.class),
                 createTab("Card", CardExample.class),
-                createTab("VL with Footer", VerticallayoutWithFooterExample.class)
+                createTab("VL with Footer", VerticallayoutWithFooterExample.class),
+                createTab("Top Bar", TopBarExample.class),
+                createTab("Cluster", ClusterExample.class)
         };
     }
 

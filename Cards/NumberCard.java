@@ -5,9 +5,8 @@ import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-@CssImport("./components/numberCard.css")
 @CssImport("./components/card.css")
-public class NumberCard extends VerticalLayout {
+public class NumberCard extends Card {
 
     public final int NORMAL = 1;
     public final int WARNING = 2;
@@ -19,12 +18,8 @@ public class NumberCard extends VerticalLayout {
     H2 number = new H2("-");
     Span description = new Span("-");
 
-    Class navigationTarget;
-
-
     public NumberCard(){
         settings();
-        listener();
         build();
     }
 
@@ -47,19 +42,8 @@ public class NumberCard extends VerticalLayout {
         }
         title.addClassName("title");
         description.setClassName("ncdescription");
-        this.addClassName("card");
         this.addClassName("space");
-        this.addClassName("card");
         number.addClassName("number");
-    }
-
-    private void listener() {
-        this.addClickListener(e -> {
-            e.getSource().getUI().ifPresent(ui -> {
-                if(navigationTarget!=null)
-                    ui.navigate(navigationTarget);
-            });
-        });
     }
 
     public NumberCard setNumber(int number){
@@ -84,8 +68,8 @@ public class NumberCard extends VerticalLayout {
         return this;
     }
 
-    public NumberCard setNavigationTarget(Class nav){
-        this.navigationTarget = nav;
+    public NumberCard setNavigationTarget(Class navigationTarget) {
+        this.navigationTarget = navigationTarget;
         return this;
     }
 
